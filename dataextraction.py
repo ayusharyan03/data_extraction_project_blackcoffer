@@ -1,9 +1,6 @@
 
-
-# Commented out IPython magic to ensure Python compatibility.
 from google.colab import drive
 drive.mount('/gdrive')
-# %cd '/gdrive/MyDrive/project/Data_Extraction_and_NLP/TestAssignment'
 
 #import necessary pacakages
 import requests
@@ -17,10 +14,10 @@ nltk.download('punkt')
 nltk.download('stopwords')
 import re
 
-#read the url file into the pandas object
+#read the url file
 df = pd.read_excel('Input.xlsx')
 
-#loop throgh each row in the df
+#loop throgh each row in the DataFrame
 for index, row in df.iterrows():
   url = row['URL']
   url_id = row['URL_ID']
